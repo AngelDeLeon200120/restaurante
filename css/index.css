@@ -1,12 +1,313 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* VARIABLES */
+:root {
+  --color-principal: #8b5e3c;
+  --color-secundario: #f3ede7;
+  --color-oscuro: #2b2b2b;
+  --color-claro: #ffffff;
+  --color-acento: #c89b6d;
+}
+
+/* BODY */
 body {
-  
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  
+  background-color: var(--color-secundario);
+  color: var(--color-oscuro);
+  line-height: 1.6;
+}
+
+/* CONTENEDOR */
+.contenedor-principal {
+  max-width: 1440px;
+  margin: auto;
+  background-color: var(--color-claro);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+}
+
+.barras{
+  background-color:var(--color-principal) ;
+  display: none;
+  justify-content: center;
+  width: 50px;
+  padding: 5px;
+  color: #fff;
+  font-size: 2rem;
+}
+/* ================= NAV ESCRITORIO ================= */
+.nav-escritorio {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #ddd;
+  background-color: var(--color-claro);
+}
+
+.nav-escritorio_icono {
+  font-size: 2.8rem;
+  color: var(--color-principal);
+}
+
+.nav-escritorio_menus ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 25px;
+}
+
+.nav-escritorio_menus ul li a {
+  text-decoration: none;
+  color: var(--color-oscuro);
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s;
+}
+
+.nav-escritorio_menus ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-principal);
+  transition: width 0.3s ease;
+}
+
+.nav-escritorio_menus ul li a:hover {
+  color: var(--color-principal);
+}
+
+.nav-escritorio_menus ul li a:hover::after {
+  width: 100%;
+}
+
+.nav-escritorio_redes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.nav-escritorio_redes .resdes {
+  font-size: 1.3rem;
+  color: var(--color-principal);
+  cursor: pointer;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.nav-escritorio_redes .resdes:hover {
+  color: var(--color-acento);
+  transform: scale(1.2);
+}
+
+/* ================= NAV TELEFONO ================= */
+.nav-telefono{
+  display: none;
+align-items: center;
+justify-content: center;
+  background-color: var(--color-acento);
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+
+}
+
+.nav-telefono ul li{
+  list-style: none;
+  margin-top: 10px;
+  font-family: "Playwrite CU Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.nav-telefono ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+
+}
+
+.nav-telefono .icono-x{
+  position: absolute;
+  background-color: #fff;
+  padding: 15px;
+  top: 10px;
+  right: 50px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/* ================= CONÓCENOS ================= */
+.conocenos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 60px;
+  gap: 40px;
+}
+
+.conocenos-texto {
+  width: 50%;
+}
+
+.conocenos-texto h1 {
+  font-size: 2.8rem;
+  color: var(--color-principal);
+  margin-bottom: 20px;
+}
+
+.conocenos-texto p {
+  font-size: 1.05rem;
+  color: #444;
+}
+
+.conocenos-img {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.conocenos-img img {
+  max-width: 480px;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ================= CAROUSEL ================= */
+.carousel {
+  padding: 60px;
+  background-color: var(--color-secundario);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.carousel .carousel_flecha-derecha,.carousel_flecha-izquierda{
+  font-size: 1.5rem;
+}
+/* .carousel-imagenes img {
+  width: 100%;
+  border-radius: 15px;
+  max-height: 400px;
+  object-fit: cover;
+} */
+
+ .imgActive{
+  width: 100%;
+  border-radius: 15px;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* ================= ESPECIALIDADES ================= */
+.especialidades {
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.especialidades-menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.especialidades-menu ul li {
+  padding: 15px 30px;
+  background-color: var(--color-principal);
+  color: var(--color-claro);
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.especialidades-menu ul li:hover {
+  background-color: var(--color-acento);
+  transform: translateY(-5px);
+}
+
+/* ================= FORMULARIO ================= */
+.formulario {
+  padding: 80px 60px;
+  background-color: var(--color-secundario);
+}
+
+.formulario form {
+  max-width: 600px;
+  margin: auto;
+}
+
+.formulario-group {
+  margin-bottom: 20px;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  resize: none;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: none;
+  border-color: var(--color-principal);
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background-color: var(--color-oscuro);
+  padding: 40px;
+  text-align: center;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.contact i {
+  font-size: 1.5rem;
+  color: var(--color-claro);
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.contact i:hover {
+  color: var(--color-acento);
+  transform: scale(1.2);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .conocenos {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .conocenos-texto,
+  .conocenos-img {
+    width: 100%;
+  }
+
+  .nav-escritorio {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }

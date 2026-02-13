@@ -7,19 +7,46 @@
     <link rel="stylesheet" href="./css/index.css">
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="icono"><i class="fa-solid fa-mug-hot"></i></div>
-        <ul>
+   <div class="contenedor-principal">
+     <header>
+      <div class="barras"><i class="fa-solid fa-bars"></i></div>
+      <nav class="nav-escritorio">
+        <div class="nav-escritorio_icono"><i class="fa-solid fa-mug-hot"></i></div>
+        <div class="nav-escritorio_menus">
+          <ul>
           <li><a href="#">Inicio</a></li>
-          <li><a href="#">Desayuno</a></li>
-          <li><a href="#">Almuerzo</a></li>
-          <li><a href="#">Cena</a></li>
+          <li><a href="#">Desayunos</a></li>
+          <li><a href="#">Almuerzos</a></li>
+          <li><a href="#">Cenas</a></li>
           <li><a href="#">Bebidas</a></li>
           <li><a href="#">Entradas</a></li>
           <li><a href="#">Postres</a></li>
         </ul>
-        <div class="redes">
+        </div>
+        <div class="nav-escritorio_redes">
+          <div class="resdes">
+            <i class="fa-brands fa-facebook"></i>
+          </div>
+          <div class="resdes">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+          <div class="resdes">
+            <i class="fa-brands fa-tiktok"></i>
+          </div>
+        </div>
+      </nav>
+      <nav class="nav-telefono">
+ <div class="icono-x"><i class="fa-solid fa-x"></i></div> 
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Desayunos</a></li>
+          <li><a href="#">Almuerzos</a></li>
+          <li><a href="#">Cenas</a></li>
+          <li><a href="#">Bebidas</a></li>
+          <li><a href="#">Entradas</a></li>
+          <li><a href="#">Postres</a></li>
+        </ul>
+        <!-- <div class="redes">
           <div class="resdes-facebook">
             <i class="fa-brands fa-facebook"></i>
           </div>
@@ -29,12 +56,11 @@
           <div class="resdes-tiktok">
             <i class="fa-brands fa-tiktok"></i>
           </div>
-        </div>
+        </div> -->
       </nav>
     </header>
     <main>
       <section class="conocenos">
-        <div class="conocenos-img"><img src="" alt="" /></div>
         <div class="conocenos-texto">
           <h1>La Casita Antigua</h1>
           <p>
@@ -50,11 +76,11 @@
         <div class="conocenos-img"><img src="./img/lugar3.jpg" alt="lugar"></div>
       </section>
       <section class="carousel">
-        <div class="carousel-imagenes"></div>
-        <div class="carousel-texto">
-          <h2></h2>
-          <p></p>
+        <div class="carousel_flecha-derecha"><i class="fa-solid fa-arrow-left"></i></div>
+        <div class="carousel-imagenes">
+          <!-- <img src="./img/lugar2.jpg" alt="carousel lugares"> -->
         </div>
+        <div class="carousel_flecha-izquierda"><i class="fa-solid fa-arrow-right"></i></div>
       </section>
       <section class="especialidades">
         <div class="especialidades-menu">
@@ -62,7 +88,6 @@
             <li>Especialidades del Chef</li>
             <li>Especialidades del dia</li>
             <li>Especialidades del mes</li>
-            
           </ul>
         </div>
       </section>
@@ -97,9 +122,12 @@
         </div>
       </div>
     </footer>
+   </div>
     <script
       src="https://kit.fontawesome.com/c9db0a2da9.js"
       crossorigin="anonymous"
     ></script>
+
+    <script src="./js/carousel.js"></script>
   </body>
 </html>
