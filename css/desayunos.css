@@ -30,6 +30,9 @@ body {
   margin: auto;
   background-color: var(--color-claro);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
 }
 
 .barras{
@@ -174,130 +177,9 @@ body {
   cursor: pointer;
 }
 
-/* ================= CONÓCENOS ================= */
-.conocenos {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 80px 60px;
-  gap: 40px;
-}
 
-.conocenos-texto {
-  width: 50%;
-}
+/* ================= DESAYUNOS ================= */
 
-.conocenos-texto h1 {
-  font-size: 2.8rem;
-  color: var(--color-principal);
-  margin-bottom: 20px;
-}
-
-.conocenos-texto p {
-  font-size: 1.05rem;
-  color: #444;
-}
-
-.conocenos-img {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-}
-
-.conocenos-img img {
-  max-width: 480px;
-  width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* ================= CAROUSEL ================= */
-.carousel {
-  padding: 60px;
-  background-color: var(--color-secundario);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.carousel .carousel_flecha-derecha,.carousel_flecha-izquierda{
-  font-size: 2rem;
-  cursor: pointer;
-}
-/* .carousel-imagenes img {
-  width: 100%;
-  border-radius: 15px;
-  max-height: 400px;
-  object-fit: cover;
-} */
-
- .imgActive{
-  width: 100%;
-  border-radius: 15px;
-  max-height: 400px;
-  object-fit: cover;
-}
-
-/* ================= ESPECIALIDADES ================= */
-.especialidades {
-  padding: 80px 60px;
-  text-align: center;
-}
-
-.especialidades-menu ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.especialidades-menu ul li {
-  padding: 15px 30px;
-  background-color: var(--color-principal);
-  color: var(--color-claro);
-  border-radius: 30px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.especialidades-menu ul li:hover {
-  background-color: var(--color-acento);
-  transform: translateY(-5px);
-}
-
-/* ================= FORMULARIO ================= */
-.formulario {
-  padding: 80px 60px;
-  background-color: var(--color-secundario);
-}
-
-.formulario form {
-  max-width: 600px;
-  margin: auto;
-}
-
-.formulario-group {
-  margin-bottom: 20px;
-}
-
-.formulario input,
-.formulario textarea {
-  width: 100%;
-  padding: 12px 15px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  resize: none;
-}
-
-.formulario input:focus,
-.formulario textarea:focus {
-  outline: none;
-  border-color: var(--color-principal);
-}
 
 /* ================= FOOTER ================= */
 footer {
@@ -376,41 +258,3 @@ footer {
 }
 }
 
-/* ================= ANIMACION CAROUSEL ================= */
-
-.carousel-imagenes {
-  overflow: hidden; /* oculta desbordes */
-  position: relative;
-  width: 100%;
-}
-
-/* Imagen normal */
-.imgActive {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  border-radius: 15px;
-
-  /* animación */
-  animation: fadeSlide 0.5s ease-in-out;
-}
-
-/* Keyframes = pasos de la animación */
-@keyframes fadeSlide {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.carousel-imagenes {
-  cursor: grab;
-}
-
-.carousel-imagenes:active {
-  cursor: grabbing;
-}
