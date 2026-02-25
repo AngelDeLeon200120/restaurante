@@ -58,14 +58,14 @@ imagenes.forEach((img) => {
 
     const index = Number(e.target.dataset.id);
 
-    const cena = comida.comida.cenas[index];
+    const bebida = comida.bebidas.jugos[index];
 
-    if (!cena) return; // seguridad extra
+    if (!bebida) return; // seguridad extra
 
-    h2.textContent = cena.nombre;
-    parrafo.textContent = cena.descripcion;
-    precio.textContent = "Q" + cena.precio;
-    Img.src = cena.img;
+    h2.textContent = bebida.nombre;
+    parrafo.textContent = bebida.descripcion;
+    precio.textContent = "Q" + bebida.precio;
+    Img.src = bebida.img;
 
     modal.prepend(h2);
     modal.prepend(Img);
